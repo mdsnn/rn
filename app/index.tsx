@@ -8,6 +8,7 @@ const Counter = () => {
     <View>
       <Text>{count}</Text>
       <Button title="Increament" onPress={()=>setCount(count+1)}></Button>
+      <Button title="Decreament" onPress={()=>setCount(count-1)}></Button>
     </View>
 
   );
