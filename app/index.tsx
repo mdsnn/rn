@@ -1,15 +1,22 @@
-import { Text, View } from "react-native";
+import { useState } from "react";
+import { Button, Text, View } from "react-native";
 
+const Counter = () => {
+  const[count, setCount] = useState(0);
+
+  return (
+    <View>
+      <Text>{count}</Text>
+      <Button title="Increament" onPress={()=>setCount(count+1)}></Button>
+    </View>
+
+  );
+};
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View>
+      
+      <Counter />
     </View>
   );
 }
